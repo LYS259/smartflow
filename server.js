@@ -31,10 +31,10 @@ app.get('/', (req, res) => {
 
 
 
-// استخدم express.static لتقديم ملفات React في الإنتاج
+// 
 app.use(express.static(path.join(__dirname, 'src/build')));
 
-// المسار الجذر يجب أن يعرض صفحة React
+// 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'build', 'index.html'));
 });
